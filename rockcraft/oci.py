@@ -149,7 +149,6 @@ class Image:
         # umoci config, but not the variant. Need to do it manually
         _config_image(image_target, ["--architecture", mapping.go_arch, "--no-history"])
 
-        emit.progress(f"Injecting OCI fields for {image_target}")
         _inject_oci_fields(
             image_target,
             arch_variant=mapping.go_variant,
